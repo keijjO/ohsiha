@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+						div.signup-wall
+						h3 Muuta tekstiäsi
+						form(class='form-signin', action='/api/threads/#{thread._id}', method='POST')
+							input(type='text', name='text', class='form-control', placeholder='Text',value="#{thread.message}",required, autofocus)
+							button(class='btn btn-lg btn-primary btn-block', type='submit') Muokkaa
+						br
+						
+						a(href='/drawthread/#{thread.id}', class='text-center new-account') Takasin
+						a(href='/signout', class='text-center new-account') Kirjaudu ulos

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+						div.signup-wall
+							ul.user-details
+								li !{thread.creator}
+								p Lisätty: !{thread.created}
+								p Muokattu: !{thread.edited}
+								hr
+								h3 !{thread.title}
+								hr
+								p !{thread.message}
+								hr
+								br
+								a(href='/editthread/#{thread._id}') Edit
+								br
+								a(href='/deletethread/#{thread._id}') Delete
+								br
+						a(href='/threads', class='text-center new-account') Takasin postauksiin
+						a(href='/signout', class='text-center new-account') Kirjaudu ulos

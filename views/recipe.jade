@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+					h1.text-center.login-title RESEPTI:
+						div.signup-wall
+							ul.user-details
+								li Nimi ---> #{recipe.title}
+								li Osoite    ---> #{recipe.source_url}
+								li Pisteet ---> #{recipe.social_rank}
+								li Ainekset ---> #{recipe.ingredients}
+								br
+								br
+								br
+								a(href='/reseptit', class='text-center new-account') Resepteihin
+						
+						a(href='/signout', class='text-center new-account') Kirjaudu ulos
+						

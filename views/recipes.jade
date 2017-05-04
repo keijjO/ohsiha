@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+				#user
+					div.signup-wall
+						- for (var i=0; i<recipe.length; i++) {
+						br
+						a(href="/recipes/#{recipe[i].recipe_id}") !{recipe[i].title}, !{recipe[i].recipe_id}
+						- }
+						br
+					a(href='/home', class='text-center new-account') Profiiliin
+					a(href='/signout', class='text-center new-account') Kirjaudu ulos

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+				#user
+					h1.text-center.login-title Terve #{user.fullname}. Tietosi on alla:
+						div.signup-wall
+							ul.user-details
+								li Username ---> #{user.username}
+								li Email    ---> #{user.email}
+								li Full Name ---> #{user.fullname}
+								li pass ---> #{user.password}
+								br
+								br
+								br
+								a(href='/threads', class='text-center new-account') Postauksiin
+						
+						a(href='/signout', class='text-center new-account') Kirjaudu ulos
+						
